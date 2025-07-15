@@ -10,6 +10,10 @@
         const {save,claim, setSave,setClaim } = useStore();
         const [userName, setUserName] = useState('');
 
+        if(save){
+            
+        }
+
         const handleSave = ()=>{
             props.setShowAddInput(false)
             axios.post(import.meta.env.VITE_BACKEND_URL+"/register",{

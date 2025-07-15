@@ -6,7 +6,7 @@ import UseStore from '../store/zstore.js';
 
 
 const DropDown = () => {
-    const {  setClaim } = UseStore();
+    const { save, setClaim } = UseStore();
     const [user, setUser] = useState('');
     const [UserList, setUserList] = useState([]);
     const [showAddInput, setShowAddInput] = useState(false);
@@ -21,6 +21,10 @@ const DropDown = () => {
                 console.error("Error fetching user list:", err);
             });
     };
+
+    if(save){
+        getUserList();
+    }
 
     useEffect(() => {
         getUserList();
