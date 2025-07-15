@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import UseStore from "../store/zstore.js";
 
 const LeaderBoard = () => {
